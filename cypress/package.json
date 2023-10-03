@@ -29,7 +29,8 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "lockfile-lint": "^4.12.1"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "e2e/**/*.{js,ts}",
