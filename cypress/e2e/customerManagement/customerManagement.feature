@@ -12,6 +12,7 @@ Feature: Manage customers as a bank manager
     And I click on the customer tab
     Then I see the customer with the first name "<firstName>", last name "<lastName>" and post code "<postCode>"
     And I delete the new added customer
+    And I validate new added customer does not exist
     Examples:
       | firstName | lastName | postCode |
       | Alfred    | Botha    | 123456   |
