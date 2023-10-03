@@ -1,3 +1,6 @@
+.idea
+
+#Cypress
 report
 node_modules
 cucumber-messages.ndjson
