@@ -32,7 +32,7 @@
     "typescript": "^5.2.2"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "integration/**/*.{js,ts}",
+    "stepDefinitions": "e2e/**/*.{js,ts}",
     "filterSpecs": true,
     "omitFiltered": true,
     "json": {

@@ -5,6 +5,7 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
+    baseUrl: 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login',
     specPattern: ["**/*.feature"],
     supportFile: "support/e2e.ts",
     videosFolder: "report/videos",
