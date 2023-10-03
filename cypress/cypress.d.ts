@@ -1,4 +1,2 @@
 /// <reference types="cypress" />
-declare namespace Cypress {
-
-}
+declare namespace Cypress {}
