@@ -1,0 +1,42 @@
+{
+  "name": "webpage-challenge",
+  "description": "Cypress-Cucumber test cases on a webpage",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:allTests": "npx cypress run --browser chrome -e TAGS='@main'",
+    "lint": "concurrently \"npm run typecheck\" \"npm run prettier:check\" \"npm run lint:ts\" \"npm run lint:lockfile\"",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --validate-https",
+    "lint:ts": "eslint --ext .json,.js,.ts,.mjs .",
+    "typecheck": "npx tsc --noEmit",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tse00/WebPageChallenge.git"
+  },
+  "author": "Tiago Encarnacao",
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "@babel/eslint-parser": "^7.22.15",
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.14.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "integration/**/*.{js,ts}",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enabled": true
+    }
+  }
+}
