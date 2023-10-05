@@ -72,7 +72,7 @@ When("I submit the new customer data", () => {
 });
 
 Then(
-  "I see the alert message",
+  "I see an alert message when an input field was left empty",
   (firstName: string, lastName: string, postCode: string) => {
     if (firstName === "") {
       cy.get(customerManagementSelectors.actions.firstNameInputField)

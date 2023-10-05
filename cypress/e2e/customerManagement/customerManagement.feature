@@ -18,13 +18,13 @@ Feature: Manage customers as a bank manager
       | firstName     | lastName             | postCode |
       | Alfred        | Botha                | 123456   |
       | 123Rob        | 456                  | Ana      |
-      | Lola   Dáibhí | Yorgos   Hermenegild | 987 456  |
+      | L@la   Dáibhí | Yor_gos   Herm€negild | 987 456  |
 
-  Scenario Outline: c
+  Scenario Outline: Validate empty input fields on add costumer page
     When I click on add customer
     And I add the first name "<firstName>", last name "<lastName>" and post code "<postCode>"
     When I submit the new customer data
-    Then I see the alert message
+    Then I see an alert message when an input field was left empty
     Examples:
       | firstName   | lastName    | postCode    |
       | {backspace} | {backspace} | {backspace} |
