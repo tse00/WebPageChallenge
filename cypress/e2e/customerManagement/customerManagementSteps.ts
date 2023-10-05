@@ -36,7 +36,7 @@ When("I click on the customer tab", () => {
   cy.get(customerManagementSelectors.actions.customersTab).click();
 });
 
-Then(
+When(
   "I search for the customer name {string} on the search bar",
   (name: string) => {
     cy.get(customerManagementSelectors.actions.searchCustomersField).type(name);
